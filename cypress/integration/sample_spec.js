@@ -1,6 +1,6 @@
 describe("My First test", function (){
 
-  it('Does not do much', function () {
+  it('Logs into the site', function () {
     cy.visit('http://paccar-portal-qa.connectedfleet.io');
     cy.get('[name="email"]')
       .type('paccaradmin@test.com');
