@@ -1,6 +1,6 @@
 describe("My First test", function (){
 
-  var dash = require('../utilities/common.util.js');
+  var dash = require('../utilities/commonUtility.js');
 
   it('Logs into the site', function () {
     cy.visit('http://paccar-portal-qa.connectedfleet.io');
@@ -11,7 +11,7 @@ describe("My First test", function (){
     cy.get('[type=submit]').click();
     cy.url()
       .should('include', '#/nav/dashboard');
-    cy.get('[href="#/nav/dealerOwnerGroup/list/"]').click();
+    cy.get(dash.dogLink).click();
     cy.get('[href="#/nav/customers/list/"]').click();
   });
 });
