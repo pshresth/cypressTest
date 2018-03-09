@@ -1,2 +1,5 @@
 # cypressTest
-basic demo that uses Cypress
+
+Basic demo test using Cypress.
+
+Start Cypress: `npm run cypress`
