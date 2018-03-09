@@ -12,5 +12,6 @@ describe("My First test", function (){
     cy.url()
       .should('include', '#/nav/dashboard');
     cy.get('[href="#/nav/dealerOwnerGroup/list/"]').click();
+    cy.get('[href="#/nav/customers/list/"]').click();
   });
 });
