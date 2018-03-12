@@ -1,3 +1,4 @@
+/// <reference types="Cypress" />
 describe("My First test", function (){
 
   var dash = require('../utilities/commonUtility.js');
