@@ -1,8 +1,8 @@
-var commonUtility = function () {
+let commonUtility = function () {
 
     this.dashboardLink = '[href="#/nav/dashboard"]';
     this.dogLink = '[href="#/nav/dealerOwnerGroup/list/"]';
-    this.customersLink = '[href="#/nav/customer/list/"]';
+    let customersLink = '[href="#/nav/customer/list/"]';
     this.dealersLink = '[href="#/nav/dealer/list/"]';
     this.vehiclesLink = '[href="#/nav/vehicle/list/"]';
     this.remoteDiagLink = '[href="#/nav/remoteDiagnostics/deactivate/"]';
@@ -20,7 +20,7 @@ var commonUtility = function () {
     this.wifiUsersLink = '[href="#/nav/wifiuser/list/"]'; // the cancel button when editing the user also has the href link
 
     this.clickCustomerLink = function () {
-        cy.get(dash.customersLink).click();
+        cy.get(customersLink).click();
         cy.url()
             .should('include', '#/nav/customer');
     }

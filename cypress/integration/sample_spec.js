@@ -1,11 +1,11 @@
 /// <reference types="Cypress" />
 describe("My First test", function (){
 
-    var dash = require('../utilities/commonUtility.js');
-    var emails = require('../utilities/params.js');
-    var loginUserArray = emails.userLoginArray;
+    let dash = require('../utilities/commonUtility.js');
+    let emails = require('../utilities/params.js');
+    let loginUserArray = emails.userLoginArray;
 
-    for (var i = 1; i <= 50; i++) {
+    for (let i = 1; i <= 50; i++) {
         it('Logs into the site', function () {
             cy.visit('http://paccar-portal-qa.connectedfleet.io');
             cy.get('[name="email"]')
@@ -16,6 +16,7 @@ describe("My First test", function (){
                 .click();
             cy.url()
               .should('include', '#/nav/dashboard');
+            dash.clickCustomerLink();
             cy.get('[id="user-profile-menu-name"]', {timeout: 6000})
               .should('be.visible');
             cy.get('[id="user-profile-menu-name"]').click();
